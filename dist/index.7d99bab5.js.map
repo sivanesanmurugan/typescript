@@ -1,0 +1,1 @@
+{"mappings":"AAAA,QAAQ,IAAI;AACZ,QAAQ,IAAI","sources":["script.ts"],"sourcesContent":["console.log(\"hello\");\r\nconsole.log(\"hi\");"],"names":[],"version":3,"file":"index.7d99bab5.js.map","sourceRoot":"/__parcel_source_root/"}

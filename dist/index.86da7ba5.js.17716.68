@@ -1,0 +1,33 @@
+let people = [
+    {
+        name: "Alice",
+        id: 1
+    },
+    {
+        name: "Bob",
+        id: 2
+    }
+];
+const todoRef = document.getElementById("tablebody");
+const todosRef = document.getElementById("todos");
+const btnRef = document.getElementById("btn");
+window.addEventListener("load", ()=>{
+    loadtheuser();
+});
+const loadtheuser = ()=>{
+    let body = "";
+    for (let todo of people)body += `<tr>
+        <th>${todo.id}</th>
+        <td>${todo.name}</td>
+        <td><button class="bg-ligth rounded">Edit</button><button class="bg-danger rounded text-white ms-2" onClick={handleClick(${todo.id})}>Delete</button></td>
+      </tr>`;
+    if (todoRef) todoRef.innerHTML = body;
+};
+const handleClick = (id)=>{
+    people = people.filter((todo)=>{
+        if (todo.id !== id) return todo;
+    });
+    loadtheuser();
+};
+
+//# sourceMappingURL=index.86da7ba5.js.map
